@@ -23,3 +23,8 @@ plt.show()
 import seaborn as sns
 sns.scatterplot(data=df, x='Статус',y='Организация заказчика').set (title='Активность организаций заявителей с декабря 2023 года по март 2024')
 plt.show()
+
+#Создание диаграммы для соотношения организаций
+status_counts = df['Организация заказчика'].value_counts()
+status_counts.plot(kind='pie', title='Распределение по организациям с 31.12.2023г. по 30.03.2024г.')
+plt.show()
